@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import Actions from "../../../../common/actions";
 import { withStyles } from "material-ui/styles";
-import { AppBar, Toolbar, Typography, Button, IconButton } from "material-ui";
+import { AppBar, Toolbar, Typography, Button, IconButton, Input } from "material-ui";
 import { Menu as MenuIcon, MoreVert } from "material-ui-icons";
 import Menu, { MenuItem } from "material-ui/Menu";
 
@@ -35,8 +35,16 @@ function MainHeader(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.flex}>
-            Title
+            mukeer
           </Typography>
+          <Input
+            id="search"
+            label="Search field"
+            type="search"
+            disableUnderline
+            className={'inputTypeSearch'}
+            margin="normal"
+          />
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>

@@ -1,0 +1,27 @@
+language: node_js
+node_js: node
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+
+before_script:
+
+script:
+  - npm run build
+
+after_script:
+  - cd ./build
+  - git init
+  - git config user.name "WhiteAce"
+  - git config user.email "whiteace@yeah.net"
+  - git add .
+  - git commit -m "Update tools"
+  - git push --force --quiet "https://travis-ci@$git@github.com:ziqinH/ziqinH.github.io.git" master:master
+
+branches:
+  only:
+    - gh-pages 
