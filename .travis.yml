@@ -20,7 +20,7 @@ after_script:
   - git config user.email "whiteace@yeah.net"
   - git add .
   - git commit -m "Update tools"
-  - git push --force --quiet "https://travis-ci@$git@github.com:ziqinH/ziqinH.github.io.git" master:master
+  - git push --force --quiet "https://b6be0fc808545366d89ecf385c771b339137e63e@github.com/ziqinH/ziqinH.github.io.git" master:master
 
 branches:
   only:
