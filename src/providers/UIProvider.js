@@ -1,11 +1,11 @@
 import * as React from "react";
 import "../common/static/icomoon/style.css";
-import { MuiThemeProvider, getMuiTheme } from "material-ui/styles";
-import { blue500, grey600 } from "material-ui/styles/colors";
+import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
+import { blue500, grey600 } from "material-ui/colors";
 // import * as injectTapEventPlugin from "react-tap-event-plugin";
 // injectTapEventPlugin();
 
-const muiTheme = getMuiTheme({
+const muiTheme = createMuiTheme({
   palette: {
     primary1Color: blue500
   },
@@ -16,7 +16,7 @@ const muiTheme = getMuiTheme({
 
 const MyUIProvider = props => {
   return (
-    <MuiThemeProvider muiTheme={muiTheme}>{props.children}</MuiThemeProvider>
+    <MuiThemeProvider theme={muiTheme}>{props.children}</MuiThemeProvider>
   );
 };
 

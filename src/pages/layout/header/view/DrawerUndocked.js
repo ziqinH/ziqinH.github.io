@@ -2,7 +2,7 @@ import * as React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import Drawer from "material-ui/Drawer";
-import MenuItem from "material-ui/MenuItem";
+import { MenuItem } from "material-ui/Menu";
 import Actions from "../../../../common/actions";
 import routers from "../../../../constants/Routers";
 import { navSwitch } from "../../../../common/util";

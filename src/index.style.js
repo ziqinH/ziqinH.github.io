@@ -1,5 +1,5 @@
 import { injectGlobal } from 'styled-components';
-import { grey50 } from 'material-ui/styles/colors';
+import { grey50 } from 'material-ui/colors';
 
 injectGlobal`
 	html{

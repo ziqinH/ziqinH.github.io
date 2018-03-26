@@ -6,7 +6,7 @@ import MainHeader from "./pages/layout/header";
 import MainFooter from "./pages/layout/footer";
 
 import Paper from "material-ui/Paper";
-import { grey200 } from "material-ui/styles/colors";
+import { grey200 } from "material-ui/colors";
 
 const logo = require("./images/logo.svg");
 

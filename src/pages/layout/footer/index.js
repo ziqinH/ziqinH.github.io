@@ -7,12 +7,11 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import Actions from "../../../common/actions";
 import routers from "../../../constants/Routers";
-import FontIcon from "material-ui/FontIcon";
-import FileCloudDownload from "material-ui/svg-icons/file/cloud-download";
-import IconLocationOn from "material-ui/svg-icons/communication/location-on";
+import FontIcon from "material-ui/Icon";
+import { CloudDownload, LocationOn } from "material-ui-icons";
 const homeIcon = <FontIcon className="icon-home" />;
-const cloudIcon = <FileCloudDownload />;
-const nearbyIcon = <IconLocationOn />;
+const cloudIcon = <CloudDownload />;
+const nearbyIcon = <LocationOn />;
 
 class Footer extends React.Component {
   routers = routers;
