@@ -14,7 +14,7 @@ class MainHeader extends React.Component {
         return (
             <section>
                 <MainAppBar />
-                <DrawerUndocked />
+                {/* <DrawerUndocked /> */}
             </section>
         );
     }
