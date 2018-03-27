@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import MainHeader from "./pages/Layout";
+import MainHeader from "./pages";
 import CssBaseline from "material-ui/CssBaseline";
 const IndexRouter = () => (
   <Router>
