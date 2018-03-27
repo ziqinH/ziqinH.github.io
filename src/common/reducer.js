@@ -1,7 +1,10 @@
-import ActionTypes from './actionTypes';
-import { handleActions } from 'redux-actions';
+import ActionTypes from "./actionTypes";
+import { handleActions } from "redux-actions";
 
 const defaultState = {
+  primary: {
+    color: "blue"
+  },
   menu: { open: false },
   bottomNav: { selectedIndex: 0 }
 };
@@ -18,7 +21,11 @@ export default handleActions(
       const { bottomNav } = state,
         { selectedIndex } = action.payload;
       return { ...state, bottomNav: { ...bottomNav, selectedIndex } };
-    }
+    },
+    [ActionTypes.SET_PRIMARY_COLOR_STATE]: (state, { payload: { color } }) => ({
+      ...state,
+      primary: { ...state.primary, color }
+    })
   },
   defaultState
 );

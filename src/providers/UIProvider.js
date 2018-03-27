@@ -1,27 +1,48 @@
 import * as React from "react";
-import "../common/static/icomoon/style.css";
-import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
-import { purple } from "material-ui/colors";
-// import * as injectTapEventPlugin from "react-tap-event-plugin";
-// injectTapEventPlugin();
-// console.log(background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',)
-const muiTheme = createMuiTheme({
-  palette: {
-    primary: {
-      light: purple[300],
-      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-      main: purple[500],
-      dark: purple[700]
-    },
-    contrastThreshold:3,
-    tonalOffset: 0.2
+// import "../common/static/icomoon/style.css";
+import {
+  MuiThemeProvider,
+  createMuiTheme,
+  withStyles
+} from "material-ui/styles";
+import CssBaseline from "material-ui/CssBaseline";
+import * as colors from "material-ui/colors";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+
+const full_screen = {
+  height: "100%",
+  width: "100%"
+};
+
+const styles = {
+  "@global": {
+    html: full_screen,
+    body: full_screen
   }
-});
+};
 
 const MyUIProvider = props => {
+  const { color } = props.primary;
+  const muiTheme = createMuiTheme({
+    palette: {
+      primary: {
+        light: colors[color][300],
+        main: colors[color][500],
+        dark: colors[color][700]
+      },
+      contrastThreshold: 3,
+      tonalOffset: 0.2
+    }
+  });
   return (
-    <MuiThemeProvider theme={muiTheme}>{props.children}</MuiThemeProvider>
+    <MuiThemeProvider theme={muiTheme}>
+      <CssBaseline />
+      {props.children}
+    </MuiThemeProvider>
   );
 };
 
-export default MyUIProvider;
+const mapStateToProps = state => state.commonState;
+
+export default connect(mapStateToProps)(withStyles(styles)(MyUIProvider));

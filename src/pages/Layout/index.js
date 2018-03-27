@@ -94,15 +94,16 @@ class MiniDrawer extends React.Component {
 
   handleDrawerOpen = () => {
     this.setState({ open: true });
+    this.props.actions.setPrimaryColorState({color: 'red'})
   };
 
   handleDrawerClose = () => {
     this.setState({ open: false });
+    this.props.actions.setPrimaryColorState({color: 'blue'})
   };
 
   render() {
     const { classes, theme } = this.props;
-
     return (
       <div className={classes.root}>
         <AppBar
