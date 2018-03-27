@@ -11,14 +11,11 @@ import {
   Drawer,
   Toolbar,
   Typography,
-  Button,
-  IconButton,
-  Input
+  IconButton
 } from "material-ui";
 import { withStyles } from "material-ui/styles";
 import {
   Menu as MenuIcon,
-  MoreVert,
   ChevronLeft,
   ChevronRight
 } from "material-ui-icons";
