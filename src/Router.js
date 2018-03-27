@@ -1,8 +1,7 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import MainHeader from "./pages/Layout/header";
-// import MainFooter from "./pages/layout/footer";
-import CssBaseline from 'material-ui/CssBaseline';
+import MainHeader from "./pages/Layout";
+import CssBaseline from "material-ui/CssBaseline";
 const IndexRouter = () => (
   <Router>
     <div>
