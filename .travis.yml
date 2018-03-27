@@ -11,7 +11,7 @@ install:
 before_script:
 
 script:
-  - yarn run build
+  - yarn build
 
 after_script:
   - cd ./build
