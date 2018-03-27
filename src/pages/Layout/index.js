@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import Actions from "../common/actions";
+import Actions from "../../common/actions";
 import classNames from "classnames";
 import {
   AppBar,
