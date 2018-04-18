@@ -3,7 +3,7 @@ import { handleActions } from "redux-actions";
 
 const defaultState = {
   primary: {
-    color: "blue"
+    color: "grey"
   },
   menu: { open: false },
   bottomNav: { selectedIndex: 0 }
