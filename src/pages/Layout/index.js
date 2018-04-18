@@ -3,13 +3,9 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Actions from '../../common/actions'
-import { AppBar, Toolbar, Typography, Button, Paper, Avatar } from 'material-ui'
-import { withStyles } from 'material-ui/styles'
-import { ChevronRight } from 'material-ui-icons'
-import { mailFolderListItems, otherMailFolderListItems } from './tileData'
-import ImageGridList from './ImageGridList'
+import { AppBar, Toolbar, Typography, Button } from 'material-ui'
+import { withStyles } from 'material-ui/styles';
 import { Link } from 'react-router-dom'
-const drawerWidth = 240
 
 const styles = theme => ({
   root: {
@@ -42,7 +38,7 @@ const styles = theme => ({
 
 class MiniDrawer extends React.Component {
   render () {
-    const { classes, theme } = this.props
+    const { classes } = this.props
     return (
       <div className={classes.root}>
         <AppBar position='fixed'>

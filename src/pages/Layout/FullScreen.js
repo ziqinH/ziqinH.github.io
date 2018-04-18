@@ -10,6 +10,7 @@ class componentName extends Component {
           style={{
             verticalAlign: 'middle'
           }}
+          alt='test'
           src={require('../../assets/room/wallhaven-121440.jpg')}
         />
       </Paper>

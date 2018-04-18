@@ -3,8 +3,7 @@ import * as React from 'react'
 import {
   MuiThemeProvider,
   createMuiTheme,
-  withStyles,
-  colorManipulator
+  withStyles
 } from 'material-ui/styles'
 import CssBaseline from 'material-ui/CssBaseline'
 import * as colors from 'material-ui/colors'
