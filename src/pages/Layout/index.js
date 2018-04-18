@@ -19,8 +19,8 @@ const styles = theme => ({
     position: 'relative',
     display: 'flex'
   },
-  appBar: {
-    position: 'fixed'
+  appToolBar: {
+    minHeight: 100
   },
   titleLeftBtn: {
     flex: 2,
@@ -45,8 +45,8 @@ class MiniDrawer extends React.Component {
     const { classes, theme } = this.props
     return (
       <div className={classes.root}>
-        <AppBar position='fixed' className={classes.appBar}>
-          <Toolbar>
+        <AppBar position='fixed'>
+          <Toolbar className={classes.appToolBar}>
             <Typography className={classes.titleLeftBtn} color='inherit' noWrap>
               <Button color='inherit' component={Link} to='/open-collective'>
                 Product
