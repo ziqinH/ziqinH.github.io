@@ -9,15 +9,15 @@ import CssBaseline from 'material-ui/CssBaseline'
 import * as colors from 'material-ui/colors'
 import { connect } from 'react-redux'
 import 'typeface-roboto'
-const full_screen = {
+const fullScreen = {
   height: '100%',
   width: '100%'
 }
 
 const styles = {
   '@global': {
-    html: full_screen,
-    body: full_screen
+    html: fullScreen,
+    body: fullScreen
   }
 }
 
@@ -54,7 +54,7 @@ const MyUIProvider = props => {
     overrides: {
       MuiAppBar: {
         colorPrimary: {
-          backgroundColor: opacity(colors[color][500], 0.2)
+          backgroundColor: opacity('#cdbca7' || colors[color][500], 0.8)
         }
       },
       MuiListItemIcon: {

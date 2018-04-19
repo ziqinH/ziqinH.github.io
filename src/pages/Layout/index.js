@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Actions from '../../common/actions'
 import { AppBar, Toolbar, Typography, Button } from 'material-ui'
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from 'material-ui/styles'
 import { Link } from 'react-router-dom'
 
 const styles = theme => ({
@@ -40,37 +40,41 @@ class MiniDrawer extends React.Component {
   render () {
     const { classes } = this.props
     return (
-      <div className={classes.root}>
-        <AppBar position='fixed'>
-          <Toolbar className={classes.appToolBar}>
-            <Typography className={classes.titleLeftBtn} color='inherit' noWrap>
-              <Button color='inherit' component={Link} to='/open-collective'>
-                Product
-              </Button>
-              <Button color='inherit'>News</Button>
-            </Typography>
-            <Typography
-              component={Link}
-              to='/'
-              className={classes.title}
-              variant='title'
-              color='inherit'
-              align='center'
-              noWrap
-            >
-              Mukeer
-            </Typography>
-            <Typography
-              className={classes.titleRightBtn}
-              color='inherit'
-              noWrap
-            >
-              <Button color='inherit'>VR Exhibition</Button>
-              <Button color='inherit'>About</Button>
-            </Typography>
-          </Toolbar>
-        </AppBar>
-      </div>
+      <AppBar position='fixed'>
+        <Toolbar className={classes.appToolBar}>
+          {/* <Typography
+            component={Link}
+            to='/'
+            className={classes.title}
+            variant='title'
+            color='inherit'
+            noWrap
+          >
+            <img height={30} src={require('../../assets/logo/h.png')} />
+          </Typography> */}
+          <Typography className={classes.titleLeftBtn} color='inherit' noWrap>
+            <Button color='inherit' component={Link} to='/open-collective'>
+              Product
+            </Button>
+            <Button color='inherit'>News</Button>
+          </Typography>
+          <Typography
+            component={Link}
+            to='/'
+            className={classes.title}
+            variant='title'
+            color='inherit'
+            align='center'
+            noWrap
+          >
+            <img height={60} src={require('../../assets/logo/v.png')} />
+          </Typography>
+          <Typography className={classes.titleRightBtn} color='inherit' noWrap>
+            <Button color='inherit'>VR Exhibition</Button>
+            <Button color='inherit'>About</Button>
+          </Typography>
+        </Toolbar>
+      </AppBar>
     )
   }
 }

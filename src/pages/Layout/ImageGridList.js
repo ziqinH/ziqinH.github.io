@@ -5,15 +5,17 @@ import GridList, { GridListTile } from 'material-ui/GridList'
 
 const styles = theme => ({
   root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
+    // display: 'flex',
+    // flexWrap: 'wrap',
+    // justifyContent: 'space-around',
+    // overflow: 'hidden',
     width: '140%',
     marginLeft: '-20%'
     // backgroundColor: theme.palette.primary.main
   },
   gridList: {
+    // width: '140%',
+    // marginLeft: '-20%'
     // height: 450
   }
 })
@@ -63,14 +65,20 @@ const ImageGridList = props => {
   const { classes } = props
 
   return (
-    <div className={classes.root}>
-      <GridList cellHeight={180} className={classes.gridList} cols={3}>
-        {tileData.map(tile => (
-          <GridListTile key={tile.img} cols={tile.cols || 1}>
-            <img src={tile.img} alt={tile.title} />
-          </GridListTile>
-        ))}
-      </GridList>
+    <div style={{ overflow: 'hidden' }}>
+      <div className={classes.root}>
+        <GridList
+          cellHeight={window.innerHeight / 3 - 3}
+          className={classes.gridList}
+          cols={3}
+        >
+          {tileData.map(tile => (
+            <GridListTile key={tile.img} cols={tile.cols || 1}>
+              <img src={tile.img} alt={tile.title} />
+            </GridListTile>
+          ))}
+        </GridList>
+      </div>
     </div>
   )
 }
