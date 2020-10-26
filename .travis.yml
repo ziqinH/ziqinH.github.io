@@ -7,7 +7,7 @@ cache:
     - node_modules
 
 install:
-  - npm
+  - npm install
 
 before_script:
 
