@@ -67,7 +67,7 @@ class MiniDrawer extends React.Component {
             align='center'
             noWrap
           >
-            <img height={60} src={require('../../assets/logo/v.png')} />
+            <img alt="" height={60} src={require('../../assets/logo/v.png')} />
           </Typography>
           <Typography className={classes.titleRightBtn} color='inherit' noWrap>
             <Button color='inherit'>VR Exhibition</Button>

@@ -11,8 +11,6 @@
 
 /*eslint-disable no-self-compare */
 
-"use strict";
-
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 
 /**
